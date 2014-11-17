@@ -1,14 +1,19 @@
+<ul>
+  <%= link_to 'New Customer',new_customer_path(@customers) %>
+  -
+  <%= link_to 'Missing Emails' %>
+</ul>
+
 <div class="customer">
   
   <ul>
-    <%= link_to 'edit',edit_customer_path(@customer) %>
+    <%= link_to 'edit',edit_customer_path(@customers) %>
     <%= link_to 'x', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
   </ul>
   
   <h2><%= customer.full_name %></h2>
 
   <p>
-    Image:
     <%= image_tag customer.image %>
   </p>
   
